@@ -1,0 +1,20 @@
+{
+  "terminal.integrated.shell.windows": "cmd.exe",
+  "terminal.integrated.env.windows": {
+    "IDF_PYTHON_ENV_PATH":"C:\\esp\\idfv_4_2\\tools\\.espressif\\python_env\\idf_py3.8_env\\Scripts"
+  },
+  "terminal.integrated.shellArgs.windows": ["/k",
+    "C:\\esp\\idfv_4_2\\esp-idf\\export.bat", 
+    ],
+  "terminal.integrated.shell.linux": "/bin/bash",
+  "terminal.integrated.shellArgs.linux": ["--init-file", "C:/esp/idfv_4_1/esp_idf/export.sh", "-i"],
+  "terminal.integrated.shell.osx": "/bin/bash",
+  "terminal.integrated.shellArgs.osx": ["--init-file", "C:/esp/idfv_4_1/esp_idf/export.sh", "-i"],
+  "files.associations": {
+    "*.md": "markdown",
+    "*.mdx": "tdx",
+    "stdio.h": "c",
+    "esp_netif.h": "c",
+    "esp_http_client.h": "c"
+  }
+}

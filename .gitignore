@@ -1,0 +1,16 @@
+build/
+node_modules/
+#sdkconfig
+#sdkconfig.old
+ipch/
+
+
+/.vs
+*.exe
+*.idb
+*.ilk
+*.log
+*.obj
+*.pdb
+*.tlog
+hh_bt_key.pem
