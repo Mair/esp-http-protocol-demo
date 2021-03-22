@@ -7,9 +7,9 @@
     "C:\\esp\\esp-idf\\export.bat", 
     ],
   "terminal.integrated.shell.linux": "/bin/bash",
-  "terminal.integrated.shellArgs.linux": ["--init-file", "C:/esp/idfv_4_1/esp_idf/export.sh", "-i"],
+  "terminal.integrated.shellArgs.linux": ["--init-file", "C:/esp/esp-idf/export.sh", "-i"],
   "terminal.integrated.shell.osx": "/bin/bash",
-  "terminal.integrated.shellArgs.osx": ["--init-file", "C:/esp/idfv_4_1/esp_idf/export.sh", "-i"],
+  "terminal.integrated.shellArgs.osx": ["--init-file", "C:/esp/esp-idf/export.sh", "-i"],
   "files.associations": {
     "*.md": "markdown",
     "*.mdx": "tdx",
