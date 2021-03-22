@@ -6,10 +6,8 @@
 
 #define TAG "1 Simple GET"
 
-void Send_json(void)
+void http_client(void)
 {
-
-  
   esp_http_client_config_t clientConfig = {
       .url = "http://worldtimeapi.org/api/timezone/Europe/London/",
   };
@@ -29,7 +27,7 @@ void Send_json(void)
   {
     ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
   }
-  esp_http_client_cleanup(client);
+  esp_http_client_close(client);
 
   while (true)
   {

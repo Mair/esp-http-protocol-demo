@@ -4,12 +4,16 @@
 #include "esp_log.h"
 #include "esp_http_client.h"
 
-#define TAG "1 Simple GET"
+#define TAG "HTTPS CLIENT"
 
-void Simple_get(void)
+void https_client(void)
 {
+  extern const unsigned char wordtime_cert[] asm("_binary_worldtime_pem_start");
+  
   esp_http_client_config_t clientConfig = {
-      .url = "http://worldtimeapi.org/api/timezone/Europe/London/",
+      .url = "https://worldtimeapi.org/api/timezone/Europe/London/",
+      //.url = "https://www.google.com",
+      .cert_pem = (char *)wordtime_cert
   };
 
   esp_http_client_handle_t client = esp_http_client_init(&clientConfig);
@@ -25,7 +29,7 @@ void Simple_get(void)
   }
   else
   {
-    ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
+    ESP_LOGE(TAG, "HTTPS GET request failed: %s", esp_err_to_name(err));
   }
   esp_http_client_close(client);
 

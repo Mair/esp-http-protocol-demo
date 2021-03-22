@@ -12,10 +12,15 @@
 
 void OnConnected(void *params)
 {
-  //comment out all except 1
-  //Simple_get();  
- // Simple_get_cb();
-  simple_server();
+  //comment out all except  1
+  http_client();
+  //http_server();
+  //https_client();
+  //https_server(); 
+  //https_chunked_client();
+  //json_server_responce();
+  //json_server_post();
+  //json_client();
 
   //leave this in place
   vTaskDelete(NULL);

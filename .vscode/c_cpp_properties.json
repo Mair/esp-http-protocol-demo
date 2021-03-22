@@ -77,7 +77,8 @@
                 "C:/esp/idfv_4_2/esp-idf/components/soc/soc/esp32/include",
                 "C:/esp/idfv_4_2/esp-idf/components/esp_system/include",
                 "C:/esp/idfv_4_2/esp-idf/components/soc/soc/include",
-                "C:/esp/idfv_4_2/esp-idf/components/newlib/platform_include"
+                "C:/esp/idfv_4_2/esp-idf/components/newlib/platform_include",
+                "C:/esp/idfv_4_2/esp-idf/components/esp_https_server/include"
             ],
             "defines": [],
             "cStandard": "c11",

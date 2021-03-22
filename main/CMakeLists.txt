@@ -1,4 +1,27 @@
-set(COMPONENT_SRCS "_2_simple_get_cb.c" "_3_send_json.c" "_2_simple_server.c" "connect.c" "_1_simple_get.c" "main.c" )
-set(COMPONENT_ADD_INCLUDEDIRS ".")
-
-register_component()
+idf_component_register(
+    SRCS
+        main.c
+        connect.c
+        _1_http_client.c
+        _2_http_server.c
+        _3_https_client.c
+        _4_https_server.c
+        _5_https_chunked_client.c
+        _6_json_server_responce.c
+        _7_json_server_post.c
+        _8_json_client_post.c
+    INCLUDE_DIRS
+        .
+    EMBED_TXTFILES
+        ../certs/google.pem
+        ../certs/cacert.pem
+        ../certs/prvtkey.pem
+        ../certs/worldtime.pem
+    REQUIRES
+        nvs_flash
+        json
+        esp_http_server
+        esp_http_client
+        esp_https_server
+)
+target_compile_definitions(${COMPONENT_LIB} PRIVATE LV_CONF_INCLUDE_SIMPLE=1)
